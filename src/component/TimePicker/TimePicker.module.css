@@ -1,0 +1,271 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.container.disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--time-text);
+}
+
+.label span {
+  color: #ef4444;
+  margin-left: 0.125rem;
+}
+
+.timePicker {
+  display: flex;
+  align-items: center;
+  background-color: var(--time-bg);
+  border: 1px solid var(--time-border);
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.timePicker:hover {
+  border-color: var(--time-focus-border);
+}
+
+.timeInputs {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.timeInput {
+  width: 2rem;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: var(--time-text);
+  font-size: 1rem;
+  outline: none;
+  padding: 0;
+  font-variant-numeric: tabular-nums;
+  
+}
+
+
+.timeInput:focus {
+  border-radius: 0.25rem;
+  outline: 1px solid var(--time-focus-border);
+  background-color: transparent;
+}
+
+.timeInput::-webkit-inner-spin-button,
+.timeInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.timeInput::placeholder {
+  color: var(--time-disabled-text);
+}
+
+.separator {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0 0.25rem;
+  color: var(--time-separator);
+}
+
+.pipe {
+  margin: 0 0.5rem;
+  color: var(--time-separator);
+  opacity: 0.6;
+}
+
+.periodSelect {
+  background: transparent;
+  border: none;
+  color: var(--time-text);
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.periodSelect:hover, .periodSelect:focus {
+  background-color: var(--time-hover);
+}
+
+.periodSelect:focus{
+  outline: none;
+}
+
+.timerTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: var(--time-icon);
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.timerTrigger:hover {
+  background-color: var(--time-hover);
+}
+
+.timerTrigger:focus {
+  outline: none;
+  background-color: var(--time-focus);
+}
+
+.timerTrigger[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Popover styles */
+.popoverContent {
+  background-color: var(--time-popover-bg);
+  border-radius: 0.5rem;
+  box-shadow: var(--time-popover-shadow);
+  border: 1px solid var(--time-border);
+  padding: 1rem;
+  width: 15rem;
+  z-index: 10;
+  height: 15rem;
+  
+}
+
+.popoverColumns {
+  display: flex;
+  gap: 1rem;
+    height: 100%;
+}
+
+.popoverColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.popoverColumnTitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--time-text);
+  opacity: 0.7;
+  text-align: center;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--time-border);
+}
+
+.popoverColumnContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: auto;
+}
+
+.popoverItem {
+  padding: 0.25rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--time-text);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.popoverItem:hover {
+  background-color: var(--time-hover);
+}
+.popoverItem:focus {
+  outline: none;
+  background-color: var(--time-focus);
+}
+
+.popoverActiveItem {
+  background-color: var(--time-active);
+  font-weight: 500;
+}
+
+.popoverActiveItem:focus {
+  background-color: var(--time-active);
+}
+
+
+
+/* Select styles */
+.selectContent {
+  background-color: var(--time-popover-bg);
+  border-radius: 0.375rem;
+  box-shadow: var(--time-popover-shadow);
+  border: 1px solid var(--time-border);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.selectScrollButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  background-color: var(--time-bg);
+  color: var(--time-text);
+}
+
+.selectItem {
+  font-size: 0.875rem;
+  color: var(--time-text);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  user-select: none;
+}
+
+.selectItem[data-highlighted] {
+  background-color: var(--time-hover);
+  outline: none;
+}
+
+.selectItem[data-state='checked'] {
+  background-color: var(--time-active);
+}
+
+.selectIndicator {
+  position: absolute;
+  left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Disabled states */
+.timePicker:has(input:disabled) {
+  background-color: var(--time-disabled-bg);
+  border-color: var(--time-border);
+  cursor: not-allowed;
+}
+
+.timeInput:disabled {
+  color: var(--time-disabled-text);
+  cursor: not-allowed;
+}
+
+.periodSelect[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
