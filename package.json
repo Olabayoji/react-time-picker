@@ -1,7 +1,7 @@
 {
-  "name": "react-time-picker",
-  "private": true,
-  "version": "0.0.0",
+  "name": "react-accessible-time-picker",
+  "private": false,
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -13,7 +13,8 @@
     "bundle": "tsup src/index.tsx --minify --format cjs,esm --legacy-output dist/index.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "prepublishOnly": "tsup"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",
