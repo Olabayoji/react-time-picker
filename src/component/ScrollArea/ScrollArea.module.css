@@ -1,0 +1,61 @@
+.scrollArea {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.viewport {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.scrollbar {
+  display: flex;
+  user-select: none;
+  touch-action: none;
+  padding: 2px;
+  transition: background 160ms ease-out;
+}
+
+.scrollbar:hover {
+  background: var(--time-scrollbar-hover-bg);
+}
+
+.scrollbar[data-orientation="vertical"] {
+  width: var(--scrollbar-size );
+}
+
+.scrollbar[data-orientation="horizontal"] {
+  flex-direction: column;
+  height: var(--scrollbar-size);
+}
+
+.thumb {
+  flex: 1;
+  background: var(--time-scrollbar-thumb);
+  border-radius: var(--scrollbar-size);
+  position: relative;
+}
+
+.thumb:hover {
+  background: var(--time-scrollbar-thumb-hover);
+}
+
+/* increase target size for touch devices */
+.thumb::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.corner {
+  background: var(--time-scrollbar-bg);
+}
