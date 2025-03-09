@@ -1,0 +1,75 @@
+/* Custom styles for the TimePicker component */
+.custom-container {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f0f9ff;
+    border: 2px solid #bae6fd;
+    max-width: 320px;
+  }
+  
+  .custom-picker {
+    border-radius: 20px !important; 
+    border: 2px solid #38bdf8 !important;
+    background-color: white !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem !important;
+  }
+  
+  .custom-input {
+    font-family: 'Courier New', monospace;
+    font-size: 1.25rem !important;
+    font-weight: 600;
+    color: #0284c7 !important;
+    width: 2.5rem !important;
+  }
+  
+  .brand-container {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    border-radius: 12px;
+    color: white;
+    max-width: 320px;
+  }
+  
+  .brand-container .label {
+    font-weight: bold;
+    color: white !important;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .brand-picker {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+    padding: 0.75rem !important;
+  }
+  
+  .brand-input {
+    color: white !important;
+    font-weight: 600;
+    font-size: 1.2rem !important;
+  }
+  
+  .brand-separator {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  .minimal-container {
+    max-width: 280px;
+  }
+  
+  .minimal-picker {
+    border: none !important;
+    border-bottom: 1px solid #d1d5db !important;
+    border-radius: 0 !important;
+    padding: 0.25rem 0.25rem 0.5rem 0.25rem !important;
+    background: transparent !important;
+  }
+  
+  .minimal-input {
+    font-size: 1.1rem !important;
+  }
