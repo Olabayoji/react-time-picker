@@ -1,0 +1,14 @@
+/src
+/node_modules
+/public
+.env
+.eslintrc.cjs
+.eslintrc.js
+.DS_Store
+
+index.html
+tsconfig.json
+tsconfig.node.json
+tsconfig.app.json
+tsup.config.tsconfig
+vite.config.ts
