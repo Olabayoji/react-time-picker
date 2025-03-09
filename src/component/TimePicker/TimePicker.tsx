@@ -1,3 +1,4 @@
+import "../../assets/style.css";
 import { useState, useRef, KeyboardEvent } from "react";
 import * as Select from "@radix-ui/react-select";
 import * as Popover from "@radix-ui/react-popover";
@@ -8,7 +9,7 @@ import classNames from "classnames";
 import { TimePickerProps, TimePickerValue } from "../../types";
 import ScrollArea from "../ScrollArea/ScrollArea";
 
-export function TimePicker({
+function TimePicker({
   is24Hour = true,
   value,
   onChange,
@@ -495,4 +496,5 @@ export function TimePicker({
   );
 }
 
+export { TimePicker };
 export default TimePicker;

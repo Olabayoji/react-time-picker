@@ -5,10 +5,11 @@
 .eslintrc.cjs
 .eslintrc.js
 .DS_Store
-
 index.html
 tsconfig.json
 tsconfig.node.json
 tsconfig.app.json
-tsup.config.tsconfig
+tsup.config.ts
 vite.config.ts
+.storybook/
+storybook-static/
