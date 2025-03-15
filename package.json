@@ -1,7 +1,7 @@
 {
   "name": "react-accessible-time-picker",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -28,6 +28,7 @@
     "@radix-ui/react-toolbar": "^1.1.2",
     "classnames": "^2.5.1",
     "react": "^19.0.0",
+    "react-accessible-time-picker": "^1.0.1",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
@@ -69,9 +70,11 @@
     "react-time-picker"
   ],
   "description": "A simple and customizable time picker component for React",
-  "github": {
-    "url": "https://github.com/Olabayoji/react-time-picker"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Olabayoji/react-time-picker.git"
   },
+  "homepage": "https://olabayoji.github.io/react-time-picker/",
   "eslintConfig": {
     "extends": [
       "plugin:storybook/recommended"
