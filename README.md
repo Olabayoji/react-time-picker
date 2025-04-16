@@ -17,11 +17,11 @@ A simple, accessible, and customizable time picker component for React applicati
 ## Installation
 
 ```bash
-npm install react-time-picker
+npm install react-accessible-time-picker
 # or
-yarn add react-time-picker
+yarn add react-accessible-time-picker
 # or
-pnpm add react-time-picker
+pnpm add react-accessible-time-picker
 ```
 
 ## Usage
@@ -29,8 +29,8 @@ pnpm add react-time-picker
 ### Basic Usage
 
 ```jsx
-import { TimePicker } from 'react-time-picker';
-import 'react-time-picker/dist/style.css'; // Import default styles
+import { TimePicker } from 'react-accessible-time-picker';
+import 'react-accessible-time-picker/dist/style.css'; // Import default styles
 
 function App() {
   return <TimePicker label="Select Time" />;
@@ -40,7 +40,7 @@ function App() {
 ### With 12-hour Format (AM/PM)
 
 ```jsx
-import { TimePicker } from 'react-time-picker';
+import { TimePicker } from 'react-accessible-time-picker';
 
 function App() {
   return <TimePicker label="Select Time" is24Hour={false} />;
@@ -51,7 +51,7 @@ function App() {
 
 ```jsx
 import { useState } from 'react';
-import { TimePicker } from 'react-time-picker';
+import { TimePicker } from 'react-accessible-time-picker';
 
 function App() {
   const [time, setTime] = useState({ hour: '09', minute: '30', period: 'AM' });
