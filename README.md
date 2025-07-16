@@ -73,7 +73,9 @@ function App() {
 |------|------|---------|-------------|
 | is24Hour | boolean | true | When true, uses 24-hour format; when false, uses 12-hour format with AM/PM selector. |
 | minuteStep | number | 5 | Controls the increment/decrement step size for minutes. Also determines the minute options shown in the dropdown (e.g., 0, 5, 10, ..., 55 for step of 5). |
+| minutePlaceholder | string | "MM" | Placeholder text for the minute input field. |
 | hourStep | number | 1 | Controls the increment/decrement step size for hours. Also determines which hour options are shown in the dropdown. |
+| hourPlaceholder | string | "HH" | Placeholder text for the hour input field. |
 | value | TimePickerValue | undefined | The controlled value for the time picker. |
 | onChange | (value: TimePickerValue) => void | undefined | Called when the time changes. |
 | label | string | undefined | Label for the time picker. |
@@ -81,6 +83,8 @@ function App() {
 | disabled | boolean | false | When true, the time picker is disabled. |
 | required | boolean | false | When true, the time picker is marked as required. |
 | classes | TimePickerClasses | {} | Custom class names for styling individual parts. |
+| popoverColumnHourTitle | string | "Hours" | Label shown above the hour list in the popover dropdown. |
+| popoverColumnMinuteTitle | string | "Minutes" | Label shown above the minute list in the popover dropdown. |
 
 ## Types
 
