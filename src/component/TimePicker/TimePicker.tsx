@@ -19,6 +19,10 @@ function TimePicker({
   required,
   minuteStep = 5,
   hourStep = 1,
+  hourPlaceholder ='HH',
+  minutePlaceholder ='MM',
+  popoverColumnHourTitle ='Hours',
+  popoverColumnMinuteTitle ='Minutes',
   classes = {},
 }: TimePickerProps) {
   // Internal state for uncontrolled mode
@@ -263,7 +267,7 @@ function TimePicker({
             onChange={handleHourChange}
             onKeyDown={handleHourKeyDown}
             onBlur={handleHourBlur}
-            placeholder={"HH"}
+            placeholder={hourPlaceholder}
             className={classNames(styles.timeInput, classes.timeInput)}
             aria-label="Hour"
             id={id ? `${id}-hour` : undefined}
@@ -282,7 +286,7 @@ function TimePicker({
             onChange={handleMinuteChange}
             onKeyDown={handleMinuteKeyDown}
             onBlur={handleMinuteBlur}
-            placeholder="MM"
+            placeholder={minutePlaceholder}
             className={classNames(styles.timeInput, classes.timeInput)}
             aria-label="Minute"
             id={id ? `${id}-minute` : undefined}
@@ -421,7 +425,7 @@ function TimePicker({
                       classes.popoverColumnTitle
                     )}
                   >
-                    Hours
+                    {popoverColumnHourTitle}
                   </div>
                   <ScrollArea>
                     <div className={styles.popoverColumnContent}>
@@ -461,7 +465,7 @@ function TimePicker({
                       classes.popoverColumnTitle
                     )}
                   >
-                    Minutes
+                    {popoverColumnMinuteTitle}
                   </div>
                   <ScrollArea>
                     <div className={styles.popoverColumnContent}>

@@ -30,13 +30,17 @@ export type TimePickerValue = {
   is24Hour?: boolean;
   value?: TimePickerValue;
   minuteStep?: number;
+  minutePlaceholder?: string;
   hourStep?: number;
+  hourPlaceholder?: string;
   onChange?: (value: TimePickerValue) => void;
   label?: string;
   id?: string;
   disabled?: boolean;
   required?: boolean;
   classes?: TimePickerClasses;
+  popoverColumnHourTitle?: string;
+  popoverColumnMinuteTitle?: string;
 };
 
 export type { TimePickerClasses, TimePickerProps };
